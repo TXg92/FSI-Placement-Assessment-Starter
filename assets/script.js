@@ -11,15 +11,20 @@ let sugar = 0; // Sugar Sprinkle
 // selecting the element with an id of credit
 const credit = document.querySelector("#credit");
 // selecting the element with an id of add-gb
-const gbPlusBtn = document.querySelector("#add-gb");
-const gbMinusBtn = document.querySelector("#minus-gb");
+//gb cookie set up
+let gbPlusBtn = document.querySelector("#add-gb");
+let gbMinusBtn = document.querySelector("#minus-gb");
 let gbQtyDisplay = document.querySelector("#qty-gb");
+//cc coookie set up
+let ccPlusBtn = document.querySelector("#add-cc");
+let ccMinusBtn = document.querySelector("#add-cc");
+let ccQtyDisplay = document.querySelector("#qty-cc");
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`;
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
-gbPlusBtn.addEventListener("click", function (e) {
+gbPlusBtn.addEventListener("click", function () {
   gb++;
   gbQtyDisplay.textContent = gb;
   // HINT: You can delete this console.log after you no longer need it!
@@ -32,4 +37,11 @@ gbMinusBtn.addEventListener("click", function () {
   // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
 });
 
-// TODO: Hook up event listeners for the rest of the buttons
+ccPlusBtn.addEventListener("click", function () {
+  cc++;
+  ccQtyDisplay.textContent = cc;
+});
+
+//HINT: You can delete this console.log after you no longer need it!
+//});
+// TODO: Hook up event listeners for the rest of the button
