@@ -17,8 +17,13 @@ let gbMinusBtn = document.querySelector("#minus-gb");
 let gbQtyDisplay = document.querySelector("#qty-gb");
 //cc coookie set up
 let ccPlusBtn = document.querySelector("#add-cc");
-let ccMinusBtn = document.querySelector("#add-cc");
+let ccMinusBtn = document.querySelector("#minus-cc");
 let ccQtyDisplay = document.querySelector("#qty-cc");
+//ss cookie setup
+let ssPlusBtn = document.querySelector("#add-sugar");
+let ssMinusBtn = document.querySelector("#minus-sugar");
+let ssQtyDisplay = document.querySelector("#qty-sugar");
+//total setup
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`;
@@ -42,6 +47,20 @@ ccPlusBtn.addEventListener("click", function () {
   ccQtyDisplay.textContent = cc;
 });
 
+ccMinusBtn.addEventListener("click", function () {
+  cc--;
+  ccQtyDisplay.textContent = cc;
+});
+
+ssPlusBtn.addEventListener("click", function () {
+  sugar++;
+  ssQtyDisplay.textContent = sugar;
+});
+
+ssMinusBtn.addEventListener("click", function () {
+  sugar--;
+  ssQtyDisplay.textContent = sugar;
+});
 //HINT: You can delete this console.log after you no longer need it!
 //});
 // TODO: Hook up event listeners for the rest of the button
