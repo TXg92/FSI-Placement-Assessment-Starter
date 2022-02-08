@@ -7,6 +7,7 @@ let yourName = "Tenzin Tsegyal"; // HINT: Replace this with your own name!
 let gb = 0; // Gingerbread
 let cc = 0; // Chocolate Chip
 let sugar = 0; // Sugar Sprinkle
+let total = 0;
 
 // selecting the element with an id of credit
 const credit = document.querySelector("#credit");
@@ -24,6 +25,7 @@ let ssPlusBtn = document.querySelector("#add-sugar");
 let ssMinusBtn = document.querySelector("#minus-sugar");
 let ssQtyDisplay = document.querySelector("#qty-sugar");
 //total setup
+let totalQtyDisplay = document.querySelector("#total-qty");
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`;
