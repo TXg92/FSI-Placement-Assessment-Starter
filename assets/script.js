@@ -66,6 +66,5 @@ ssMinusBtn.addEventListener("click", function () {
   sugar--;
   ssQtyDisplay.textContent = sugar;
 });
-//HINT: You can delete this console.log after you no longer need it!
 //});
 // TODO: Hook up event listeners for the rest of the button
