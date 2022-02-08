@@ -32,6 +32,7 @@ credit.textContent = `Created by ${yourName}`;
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener("click", function () {
+  let gbSum = parseInt(gbQtyDisplay.textcontent);
   gb++;
   gbQtyDisplay.textContent = gb;
   // HINT: You can delete this console.log after you no longer need it!
@@ -45,11 +46,13 @@ gbMinusBtn.addEventListener("click", function () {
 });
 
 ccPlusBtn.addEventListener("click", function () {
+  let ccSum1 = parseInt(ccQtyDisplay.textContent);
   cc++;
   ccQtyDisplay.textContent = cc;
 });
 
 ccMinusBtn.addEventListener("click", function () {
+  let ccSum2 = parseInt(ccQtyDisplay.textContent);
   cc--;
   ccQtyDisplay.textContent = cc;
 });
