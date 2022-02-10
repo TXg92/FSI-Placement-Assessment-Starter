@@ -7,7 +7,7 @@ let yourName = "Tenzin Tsegyal"; // HINT: Replace this with your own name!
 let gb = 0; // Gingerbread
 let cc = 0; // Chocolate Chip
 let sugar = 0; // Sugar Sprinkle
-let total = 0;
+let total = gb + cc + sugar;
 
 // selecting the element with an id of credit
 const credit = document.querySelector("#credit");
@@ -25,46 +25,55 @@ let ssPlusBtn = document.querySelector("#add-sugar");
 let ssMinusBtn = document.querySelector("#minus-sugar");
 let ssQtyDisplay = document.querySelector("#qty-sugar");
 //total setup
-let totalQtyDisplay = document.querySelector("#total-qty");
+let totalQtyDisplay = document.querySelector("#qty-total");
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`;
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener("click", function () {
-  let gbSum = parseInt(gbQtyDisplay.textcontent);
   gb++;
   gbQtyDisplay.textContent = gb;
+  totalQtyDisplay.textContent = ++total;
   // HINT: You can delete this console.log after you no longer need it!
 });
 
 gbMinusBtn.addEventListener("click", function () {
   // HINT: You can delete this console.log after you no longer need it!
-  gb--;
-  gbQtyDisplay.textContent = gb;
-  // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+  if (gb > 0) {
+    gb--;
+    gbQtyDisplay.textContent = gb;
+    totalQtyDisplay.textContent = --total;
+    // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+  }
 });
 
 ccPlusBtn.addEventListener("click", function () {
-  let ccSum1 = parseInt(ccQtyDisplay.textContent);
   cc++;
   ccQtyDisplay.textContent = cc;
+  totalQtyDisplay.textContent = ++total;
 });
 
 ccMinusBtn.addEventListener("click", function () {
-  let ccSum2 = parseInt(ccQtyDisplay.textContent);
-  cc--;
-  ccQtyDisplay.textContent = cc;
+  if (cc > 0) {
+    cc--;
+    ccQtyDisplay.textContent = cc;
+    totalQtyDisplay.textContent = --total;
+  }
 });
 
 ssPlusBtn.addEventListener("click", function () {
   sugar++;
   ssQtyDisplay.textContent = sugar;
+  totalQtyDisplay.textContent = ++total;
 });
 
 ssMinusBtn.addEventListener("click", function () {
-  sugar--;
-  ssQtyDisplay.textContent = sugar;
+  if (sugar > 0) {
+    sugar--;
+    ssQtyDisplay.textContent = sugar;
+    totalQtyDisplay.textContent = --total;
+  }
 });
-//});
+
 // TODO: Hook up event listeners for the rest of the button
